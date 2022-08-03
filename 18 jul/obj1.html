@@ -1,0 +1,16 @@
+<script>
+// Javascript object manual access
+
+var empDetails={"eno":1001,"enm":"Jarvis","esal":1000.56}
+document.write("<h1>Employee Details Loop Access</h1>");
+for(let key in empDetails)
+{ 
+ document.write(key+"---->"+empDetails[key]+"<br>");
+}
+
+document.write("<h1>Employee Details Manual Access</h1>");
+document.write("<p>Eno : "+empDetails["eno"]+"</p>");
+document.write("<p>Enm : "+empDetails["enm"]+"</p>");
+document.write("<p>Esal : "+empDetails.esal+"</p>");
+
+</script>

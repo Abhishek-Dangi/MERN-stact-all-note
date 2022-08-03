@@ -1,0 +1,11 @@
+-> WAP to check greater number between two using if statement
+
+-> WAP to check 3-digit number is palindrome or not (ifelse)
+
+-> WAP to check a single character string is uppercase or lowercase
+
+-> WAP to convert single character string to its cross case
+
+-> WAP to check a number is prime or not (while loop)
+
+-> WAP to check n digit number is armstrong or not

@@ -1,0 +1,15 @@
+<script>
+
+    var arr = [12, 32, 54, 23, 12, 54];
+    document.write("<h1>Before reverse array :" + arr + "</h1>");
+    var n = arr.length;
+    var s = parseInt(n / 2);
+    for (let i = 0; i < s; i++) {
+        let temp = arr[i];
+        arr[i] = arr[n - 1 - i];
+        arr[n - 1 - i] = temp;
+    }
+    document.write("<h1>After reverse array:" + arr + "</h1>");
+
+
+</script>

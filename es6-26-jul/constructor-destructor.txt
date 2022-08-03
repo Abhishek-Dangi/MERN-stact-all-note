@@ -1,0 +1,21 @@
+Constructor :-
+
+-> It is member method of class
+-> It is used to assign value to class parameters
+-> It will be auto invoked when object of class is created
+-> No need of explicit calling
+-> It have fixed name in ES6
+
+constructor()
+{
+ statements
+}
+
+-> Types of constructor
+
+* Default or 0-paramatrised constructor
+* Paramatrised constructor
+
+Note : Destructor cannot be implemented
+
+

@@ -1,0 +1,9 @@
+Javascript : It is a client side script used to apply dynamic changes on webpage like validation , 
+event programming , animations etc
+                    or
+Javascript : It is event based script used to perform dynamic changes on web page , where events are 
+activity which when when performed lead to access specific functionality.
+
+-------------------------------------------------------- 
+                     
+                    

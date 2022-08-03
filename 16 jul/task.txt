@@ -1,0 +1,8 @@
+-> WAP to create array containing 10-element , where element at odd index(1,3,5,7,9) must be printed
+element at even index(0,2,4,6,8) must be added
+
+-> WAP to search element inside array
+
+-> WAP to reverse array elements
+
+-> WAP to sort array elements (bubble sort)

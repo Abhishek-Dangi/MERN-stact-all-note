@@ -1,0 +1,21 @@
+Controll structure : It is used to deploy decision making , iterations & switching at application level
+
+-> Conditional statements : Used to deploy decision making
+
+* if statement  
+* if-else statement
+* Ladder if-else statement
+  (if-elseif-else statement)
+* switch statement  
+
+-> Controll statements : Used to deploy iterations at application level (loops)
+
+Number data : do-while , for , while loop
+Collections : for-in loop , for-of loop
+
+-> Jumping statements : Used to apply switching at application level
+
+break , continue
+
+
+

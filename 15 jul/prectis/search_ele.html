@@ -1,0 +1,16 @@
+<script>
+    var arr = [12, 32, 54, 27, 76, 34, 75, 33];
+    var n = 33;
+    flag = 1;
+
+    for (let i in arr) {
+        if (arr[i] == n) {
+            document.write(i + "---> number is found");
+            flag = 0;
+        }
+    }
+    if (flag)
+        document.write("number is not found");
+
+</script>
+<!-- wrong logic -->

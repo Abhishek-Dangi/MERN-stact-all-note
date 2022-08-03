@@ -1,0 +1,3 @@
+Callback : Function is block of code which will be invoked when it is called , function on execution may return value.
+If required function may call another function in response of execution is considered as callback function. 
+                 

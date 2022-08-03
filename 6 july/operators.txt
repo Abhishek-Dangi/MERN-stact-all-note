@@ -1,0 +1,50 @@
+Operators : Those programming entity which perform operation on operands are operator
+
+a+b -> (a+b):expression , (a,b):operands , (+):operator
+
+--------------------------------------------------------------
+
+Classification of operators :- operators are classified on the basis of number of operands
+
+-> Unary operator : 1 operand : ++ , --
+
+-> Binary operator : 2 operand : + , = , > , && , |
+
+-> Ternary or Conditional operator : 3 operand
+(condition)?true statement:false statement;
+
+--------------------------------------------------------------
+
+Types of operators :-
+
+-> Arithmatic operator : + , - , * , / , %
+
+-> Assignment operator : = , += , -= , *= , /= , %=
+
+-> Comparison operator : == , === , > , < , >= , <= , !=
+
+-> Logical operator : && , || , !
+
+-> Bitwise operator : & , | , ^ , ~ , << , >>
+
+-> Increment/Decrement operator : ++ , --
+
+-> Ternary or Conditional operator
+
+-> Special operator : typeof
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

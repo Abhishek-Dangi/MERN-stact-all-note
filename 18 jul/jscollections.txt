@@ -1,0 +1,63 @@
+JS Collections :- It is collection of multiple hetrogeneous data elements at particular location , apart from array this collections are capable to store multiple hetrogeneous data instead of homogeneous data elements
+
+Depending on storage technique this storages are classified into two parts :-
+
+-> Array
+
+-> Object  
+
+---------------------------------------------------------
+---------------------------------------------------------
+
+-> Object : It is collection of hetrogeneous data elements , where each data element will be given by a key:value pair to handle & manupulate data inside object
+
+syntax:
+var object_name={key1:value1,key2:value2,.....,keyn:valuen}
+
+eg:
+var empDetails={"eno":1001,"enm":"Jarvis","esal":1000.56}
+
+key : string index
+value : any hetrogeneous data
+
+---------------------------------------------------------
+---------------------------------------------------------
+
+-> Array : It is collection of hetrogeneous data elements , where each data element will be given by a numeral index value to handle & manupulate data inside array
+
+i) Manual array
+
+var array_name;
+array_name=[ele1,ele2,ele3.....elen];
+
+or
+
+var array_name=[ele1,ele2,ele3.....elen];
+ 
+ii) Array by using array function
+
+var array_name=new Array(ele1,ele2,ele3.....elen);
+                  or
+var array_name=new Array(no. of element);
+                
+  
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+

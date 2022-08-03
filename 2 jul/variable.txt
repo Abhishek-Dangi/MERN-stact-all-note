@@ -1,0 +1,46 @@
+Variable : This are reserve memory block used to store data ,type of data stored 
+in variable will be given by its datatype. As JS is object based object oreinted in 
+nature. Hence in JS variables are refrence
+
+JS reference variable : This are reserve memory block capable to store specific
+ type of data, type of data will be manages internally as per data refered
+
+syntax:
+
+var ref_var_name
+ref_var_name=value
+
+or 
+
+var ref_var_name=value
+
+
+-------------------------------------------------------------
+-------------------------------------------------------------
+
+JS standard :- It is object oreinted in nature , i.e it is used to deploy code 
+reusability , code reimplementation , modularity & security at application level
+ by following all oops features , that includes
+
+* Encapsulation
+* Abstraction
+* Inheritance
+* Polymorphism
+
+OOPS ->
+        partially OO -> PHP , C++ , Java
+        fully OO ->
+                 object based OO -> JS(ES<=5)
+                 class based OO -> Python , Ruby , JS(ES>=6) 
+                            
+
+
+
+
+
+    
+
+
+
+
+

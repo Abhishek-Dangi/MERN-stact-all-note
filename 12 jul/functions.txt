@@ -1,0 +1,108 @@
+Functions : It is block of code which will be invoked when it is called , used to implement code
+ reusability write once & run any number of time.
+                    As Javascript is object oreinted each entity is considered as object & 
+                    functions are also considered as reference.
+                    
+--------------------------------------------------------
+--------------------------------------------------------
+
+Classification of functions :-
+
+--> Pre-defined or Builtin function : Those functions which are available by default in env.
+
+eg : parseInt() , parseFloat().........
+
+-> User-defined or Custom function : Those functions which are created as per users requirement.
+
+--------------------------------------------------------
+--------------------------------------------------------
+
+--> Types of function on the basis of its implementation:-
+
+* Default function 
+
+syntax : 
+function function_name(args)    -> if any
+{
+ statements
+ return     -> if any 
+}
+
+calling syntax : function_name()
+ 
+--------------------------------------------------------
+
+* Anonymous or Variable function
+
+syntax : 
+var function_name=function (args){    -> if any
+ statements
+ return     -> if any 
+}
+
+calling syntax : function_name()
+ 
+--------------------------------------------------------
+
+* Expression or Arrow function
+
+syntax : 
+var function_name=(args)=>{    -> if any
+ statements
+ return     -> if any 
+}
+
+calling syntax : function_name()
+ 
+--------------------------------------------------------
+
+* Lamda Expression or Fat arrow function
+
+syntax :
+
+(()=>{
+ statements
+})();
+
+key points :
+
+** It is function expression
+** It is auto invoked when excuted
+** Cannot return value
+** It cannot be explicitly called
+** Used to transform from one location to another as function body 
+
+function test(a,b,f)
+{
+ var c=a+b;
+ f()
+}
+
+test(10,20,()=>{
+ document.write("sgsgsgs")
+})
+
+--------------------------------------------------------
+
+* Callback function
+* Prototype
+
+--------------------------------------------------------
+--------------------------------------------------------
+
+-> Classification onthe basis of argument & return statement :-
+
+* Function without argument & without return statement
+* Function with argument & without return statement
+* Function without argument & with return statement
+* Function with argument & with return statement
+                     
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    

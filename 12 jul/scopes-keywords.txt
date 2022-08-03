@@ -1,0 +1,9 @@
+Scopes & keywords :-
+
+var keyword : It is used to create scopic parameter confined to block level global scope & function block
+
+global parameter : It is used to create global member
+
+const keyword : It is used to create scopic parameter confined to block level global scope & function block , but parameter cannot be changed
+
+let keyword : It is used to create scopic parameter confined to controll statements block (if , for , while.....)

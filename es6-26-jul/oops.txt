@@ -1,0 +1,64 @@
+OOPS : ES6 it is class based object oreinted in nature , i.e it follows all oops features which includes 
+
+Features of OOP'S :-
+
+-> Encapsulation
+-> Abstraction
+-> Polymorphism
+-> Inheritance 
+
+Note : Apart from ES6 , ES5 was object based object oreinted & not implemented classes & was not capable to implement class based functionalities like (inheritance ......)
+
+--------------------------------------------------------------
+
+Encapsulation : It is an object oreinted feature which signify wrapping of data & functionality into a single unit is encapsulation , as it wrap application level data together hence also considered as feature of data binding.
+
+Note : In oops 'object' carries encapsulation
+
+--------------------------------------------------------------
+
+Abstraction : It is an object oreinted feature which is used to apply application level security by making application level data secure & functionality globally accessible , as it makes data secure also termed as data hiding.
+
+Note : In ES6 abstraction is all about nomenculature (naming conventions)
+ 
+a : data member , aData : member method 
+ 
+-> Public member : a , aData : Access all locations 
+ 
+-> Private member : #a , #aData : Access in class only
+ 
+--------------------------------------------------------------
+
+Inheritance(is-a relationship) : It is an object oreinted feature which signify sharing of properties of one class in another class is inheritance , used to deploy modularity at application level
+
+ERP1 : Admin , Acedemic , Placement
+ERP2 : Admin , Accounts , Staff
+                         
+                         is a 
+             Class A <---------- Class B
+
+class A -> Base : Parent : Super class  
+class B -> Derived : Child : Sub class  
+
+Types of inheritance :-
+
+-> Single level inheritance
+-> Multilevel inheritance
+-> Hierarchical inheritance
+
+Note : Due to ambiguity , multiple & hybrid inheritance cannot be implemented , other technology implement interface for same. In ES6 interface cannot be implemented , but if essential to work switch for TS (Typescript) 
+
+--------------------------------------------------------------
+
+Overriding : In case of Inheritance if base & derived class contain data or functionality by same name , in this case drived ovveride base class implementations & considered as overriding. As it leads to implement loss of property it should be restricted.
+
+--------------------------------------------------------------
+
+
+
+
+
+
+
+
+

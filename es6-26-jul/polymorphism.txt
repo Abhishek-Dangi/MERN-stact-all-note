@@ -1,0 +1,6 @@
+polymorphism : It is an object oreinted feature which signify , poly means many & mophism means forms , i.e one entity having different different implementation is polymorphism 
+
+-> Overloading : functions
+-> Overriding
+
+Function overloading : A kind of polymorphism used to implement a function with same name & different-different implementation 

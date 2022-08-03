@@ -1,0 +1,20 @@
+Modules :- It is collection of variables , functions , prototype or classes , which can be linked at 
+application level as required & can be removed if not required. Used to deploy code reusability & 
+re-implementation.Modules can also be named as dependency or packages.
+
+Note : Depending on avaibility & linking modules are classified
+
+-> Level 1 : Application level , non installable dependency (part of node env.)
+
+eg : http , url , fs , path......  
+
+-> Level 2 : Application level , installable dependency
+
+eg : express , express-session , express-fileupload.....
+to install : npm install <module_name>  
+
+-> Level 3 : Global dependency , environmental dependency which is to be installed explicitly
+
+eg : @angular/cli , create-react-app , nodemon.....   
+to install : npm install <module_name> -g  
+

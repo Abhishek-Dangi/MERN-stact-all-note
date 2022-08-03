@@ -1,0 +1,40 @@
+<script>
+//WAP to sort element inside array
+
+var ar=[10,20,30,40,50,60,70];
+document.write("<h1>Before sort array : "+ar+"</h1>");
+
+for(let j=0;j<ar.length-1;j++)
+{
+ for(let i=0;i<ar.length-1;i++)
+ {
+  if(ar[i]<ar[i+1])
+  {
+   let temp=ar[i];
+   ar[i]=ar[i+1];
+   ar[i+1]=temp;
+  }
+ }
+}
+
+document.write("<h1>After sort array : "+ar+"</h1>");
+
+/* Bubble sort :-
+
+0 -> 10 20 20 20 20
+1 -> 20 10 30 30 30
+2 -> 30 30 10 40 40   pass I 
+3 -> 40 40 40 10 50   no. of pass = no. of ele - 1
+4 -> 50 50 50 50 10
+
+*/
+
+
+</script>
+
+
+
+
+
+
+

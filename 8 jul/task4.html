@@ -1,0 +1,25 @@
+<script>
+//WAP to convert single character string to its cross case
+
+var s="_";
+
+document.write("<h1>Before changes string s : "+s+"</h1>");
+
+var n=s.charCodeAt();
+if(n>=65 && n<=90)
+{
+ document.write("<h1>Uppercase string</h1>");
+ n+=32;
+} 
+else if(n>=97 && n<=122)
+{
+ document.write("<h1>Lowercase string</h1>"); 
+ n-=32;
+} 
+else
+ document.write("<h1>Invalid character input</h1>");
+
+s=String.fromCharCode(n)
+document.write("<h1>After changes string s : "+s+"</h1>");
+
+</script>

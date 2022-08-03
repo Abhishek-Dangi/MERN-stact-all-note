@@ -1,0 +1,20 @@
+JSON : It stands for Javascript object notation 
+
+key points :-
+
+-> It is string formatted notation of JS objects
+-> Multiple applications like web-web , mobile-web & others mainly used JSON for data transmission
+-> It is compatible with all technologies
+-> JS comes with methods to conver object to string & string to object
+
+JS object -> string(JSON) : JSON.stringify(object)  
+
+string(JSON) -> JS object : JSON.parse(string)
+
+
+JSON viewer : http://jsonviewer.stack.hu/
+
+
+JSON API : https://jsonplaceholder.typicode.com/
+
+
