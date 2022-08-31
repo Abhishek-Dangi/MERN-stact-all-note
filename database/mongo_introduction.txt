@@ -1,0 +1,36 @@
+Database : It is application level permanent storage , capable to store bulk amount of data at application level, this storages are permanent hence can be manually accessed & manupulated as per requirement.
+
+-----------------------------------------------------------
+-----------------------------------------------------------
+
+MongoDB : It is NoSQL based database , capable to store bulk amount of unstructured data at particular location , as this database is NoSQL based hence it do not impelement schema or structure to handle data hence compatible to handle big data.
+
+key points :-
+-> It is schema less database
+-> Do not support keys , joins , relations like cases
+-> Capable to handle bulk amount of unstructured data
+-> Entire data will be stored in JSON format
+-> Database architecture :-
+
+* Database : It is virtual storage , will come in existance as per data
+
+* Collection : It is storage of multiple document , where each document can be of different-different key-value pair
+
+* Document : It is JS object capable to store record in the form of key value pair
+
+* Field : key of JS object (document) is field   
+
+-----------------------------------------------------------
+-----------------------------------------------------------
+install:-
+
+https://www.mongodb.com/docs/v5.0/tutorial/install-mongodb-on-ubuntu/
+
+window install :-
+
+https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-windows/
+
+
+   
+
+

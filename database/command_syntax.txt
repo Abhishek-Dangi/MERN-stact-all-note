@@ -1,0 +1,16 @@
+Collections :- It is collection of JS objects , i.e documents & each document can be of different-different key values.
+
+Types of collections :-
+
+-> Capped collection : A collection with restriction is capped  
+
+db.createCollection("collection_name",{"max":100,"size":10000,"capped":true})
+
+-> Uncapped collection : A collection without restriction is capped
+
+db.createCollection("collection_name")
+   
+
+ 
+
+

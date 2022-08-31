@@ -1,0 +1,19 @@
+<script>
+
+    document.write("<h1>before exction </h1>");
+
+    // fatarrow function 
+    (() => {
+        document.write("<h1>fatarrow exction </h1>")
+    })();
+
+    ((a, b) => {
+        c = a + b;
+        document.write("<h1>fatarrow funtion with arguments exction </h1>")
+        document.write("<h1>addtion = </h1>" + c);
+    })(10, 20);
+
+
+    document.write("<h1>after exction </h1>");
+
+</script>

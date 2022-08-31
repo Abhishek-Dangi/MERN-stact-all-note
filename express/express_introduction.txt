@@ -1,0 +1,49 @@
+Express : It is Node JS based server side development framework , used to develop server side for web based application by following framework approach.
+
+Note : Level 2 dependency
+command : npm install express
+          import express from 'express'
+          
+LTS : 4.18.1
+
+---------------------------------------------------------------
+
+Features of ExpressJS :-
+
+1) Automatic management to handle request & response
+
+2) Default functionality to handle url routes & method 
+checking
+
+3) Template pages & engines : Template page are UI pages capable to store both client side & server side data , which will be loaded in response with the help of template engines (this are modules used to read & load content in response)
+
+    Template page = Client side code + Server side code 
+                   (html,css,js,jquery) (ejs,pug,jade)
+
+Template engine   Template scripts
+    ejs              ejs script
+    pug              pug script                             
+    jade             jade script 
+
+demo.pug
+
+html
+head
+ title PUG DEMO
+body
+ h1 Welcome to world of pug
+ 
+4) Static files loading
+
+5) Auto header management
+
+6) Middleware functions
+
+7) Connectivity to all major databases (MySQL , Mongodb,.....)  
+
+
+            
+            
+            
+            
+            

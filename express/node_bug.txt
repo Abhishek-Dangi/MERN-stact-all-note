@@ -1,0 +1,11 @@
+Node Implementational Problems :-
+
+-> Manual request response handelling mechanism
+
+-> Manual url routing & method checking
+
+-> Unavaibility of template pages
+
+-> Manual header management 
+
+-> Problem in static files loading(.css , .js , .png......) 

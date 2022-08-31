@@ -1,17 +1,16 @@
 <script>
 
-var a=100;
+    var a = 100;
 
-document.write("outside if a ="+a+"<br>");
+    document.write("outside if a =" + a + "<br>");
 
-if(true)
-{
- let b=200;
- document.write("inside if a ="+a+"<br>");
- document.write("inside if b ="+b+"<br>");
-}
+    if (true) {
 
-document.write("outside if b ="+b+"<br>");
+        // let is only use in inside the block only outside it is not exist
+        let b = 200;
+        document.write("inside if a =" + a + "<br>");
+        document.write("inside if b =" + b + "<br>");
+    }
+
+    document.write("outside if b =" + b + "<br>"); // its not exit outside because it is let 
 </script>
-
-

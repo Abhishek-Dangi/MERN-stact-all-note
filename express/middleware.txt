@@ -1,0 +1,36 @@
+Middleware Functions : This are function capable to get upcoming request , to work on request as per requirement after making successfull implementation transfer request to next proccess , without disturbing application request response mechanism
+
+Traditional req-res :
+                       http request 
+       Client side   ----------------> Server side
+                     <----------------
+                       http response
+
+Middleware req-res :
+
+             http request        http request 
+    Client side ------> Middleware ------> Server side
+    <-------------------------------------------------
+                       http response
+                         
+Types of middleware :-
+
+-> Application level middleware
+
+---------------------------------------------------------------
+
+-> Route level middleware : This are middleware function capable to specify route at application level as per users capability(admin , user , visitor)
+
+App :
+
+visitor : / , /home , /about , /contact , /service , /register , /login
+
+user : /userhome , /epuser , /cpuser , /logout   
+
+admin : /adminhome , /epadmin , /cpadmin , /logout , /manageusers
+
+---------------------------------------------------------------
+
+-> Builtin middleware
+-> Third party middleware
+                                                 

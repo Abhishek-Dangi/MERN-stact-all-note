@@ -1,0 +1,19 @@
+URL segments :-
+
+http://localhost:8081    /service
+           s1                             s2
+   
+             s1                                     s2           
+http://localhost:8081             /service
+?username=admin&password=admin123
+                              s3              
+                              
+s1 : Domain
+s2 : Path
+s3 : Query string (data attached with url)                              
+
+Note : routing must be done by s2
+req.url -> s2+s3
+
+
+

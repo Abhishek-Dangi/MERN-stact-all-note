@@ -1,0 +1,15 @@
+<script>
+
+    var emp = { "ename": "abhi", "enom": 20001, "esall": 230423 }
+    document.write("loop access");
+    for (let key in emp) {
+        document.write(key + "------>" + emp[key] + "<br>");
+    }
+
+    document.write("access manualy ");
+    document.write("emp name :" + emp["ename"] + "<br>");
+    document.write("emp number :" + emp["enom"] + "<br>");
+    document.write("emp sallary :" + emp.esall + "<br>");
+
+
+</script>
