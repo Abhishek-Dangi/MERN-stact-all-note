@@ -1,0 +1,310 @@
+(base) administrator@l1mn3:~$ sudo service mongod start
+[sudo] password for administrator: 
+(base) administrator@l1mn3:~$ mongo
+MongoDB shell version v4.4.15
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("7d38c140-3a80-429d-8842-437be3c1c287") }
+MongoDB server version: 4.4.15
+---
+The server generated these startup warnings when booting: 
+        2022-09-05T16:09:29.827+05:30: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+        2022-09-05T16:09:31.598+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> 
+> show dbs
+admin              0.000GB
+config             0.000GB
+employeedb         0.000GB
+local              0.000GB
+product-inventory  0.000GB
+productdb          0.000GB
+stackbatch45       0.000GB
+> use stackbatch45
+switched to db stackbatch45
+> show collections
+data
+data1
+> 
+
+
+
+
+
+
+> db.data.drop();
+true
+> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+> db.createCollection("data")
+{ "ok" : 1 }
+> show collections
+data
+data1
+> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+> db.data.insert({"rno":1001,"name":"pankaj","phy":56,"che":78,"mat":43})
+WriteResult({ "nInserted" : 1 })
+> db.data.insert({"rno":1002,"name":"ravi","phy":16,"che":71,"mat":13})
+WriteResult({ "nInserted" : 1 })
+> db.data.insert([{"rno":1003,"name":"test","phy":11,"che":22,"mat":33},{"rno":1004,"name":"test1","phy":21,"che":21,"mat":13}])
+BulkWriteResult({
+	"writeErrors" : [ ],
+	"writeConcernErrors" : [ ],
+	"nInserted" : 2,
+	"nUpserted" : 0,
+	"nMatched" : 0,
+	"nModified" : 0,
+	"nRemoved" : 0,
+	"upserted" : [ ]
+})
+> show collections
+data
+data1
+> db.data.insertOne({"rno":1005,"name":"jarvis","phy":6,"che":7,"mat":1})
+{
+	"acknowledged" : true,
+	"insertedId" : ObjectId("6315d4e285f16a97169f94c3")
+}
+> db.data.insertMany([{"rno":1006,"name":"test","phy":11,"che":22,"mat":33},{"rno":1007,"name":"john","phy":2,"che":22,"mat":33}])
+{
+	"acknowledged" : true,
+	"insertedIds" : [
+		ObjectId("6315d53085f16a97169f94c4"),
+		ObjectId("6315d53085f16a97169f94c5")
+	]
+}
+> 
+
+> db.data.find()
+{ "_id" : ObjectId("6315d2c485f16a97169f94bf"), "rno" : 1001, "name" : "pankaj", "phy" : 56, "che" : 78, "mat" : 43 }
+{ "_id" : ObjectId("6315d2df85f16a97169f94c0"), "rno" : 1002, "name" : "ravi", "phy" : 16, "che" : 71, "mat" : 13 }
+{ "_id" : ObjectId("6315d3bb85f16a97169f94c1"), "rno" : 1003, "name" : "test", "phy" : 11, "che" : 22, "mat" : 33 }
+{ "_id" : ObjectId("6315d3bb85f16a97169f94c2"), "rno" : 1004, "name" : "test1", "phy" : 21, "che" : 21, "mat" : 13 }
+{ "_id" : ObjectId("6315d4e285f16a97169f94c3"), "rno" : 1005, "name" : "jarvis", "phy" : 6, "che" : 7, "mat" : 1 }
+{ "_id" : ObjectId("6315d53085f16a97169f94c4"), "rno" : 1006, "name" : "test", "phy" : 11, "che" : 22, "mat" : 33 }
+{ "_id" : ObjectId("6315d53085f16a97169f94c5"), "rno" : 1007, "name" : "john", "phy" : 2, "che" : 22, "mat" : 33 }
+
+> db.data.find()
+{ "_id" : ObjectId("6315d2c485f16a97169f94bf"), "rno" : 1001, "name" : "pankaj", "phy" : 56, "che" : 78, "mat" : 43 }
+{ "_id" : ObjectId("6315d2df85f16a97169f94c0"), "rno" : 1002, "name" : "ravi", "phy" : 16, "che" : 71, "mat" : 13 }
+{ "_id" : ObjectId("6315d3bb85f16a97169f94c1"), "rno" : 1003, "name" : "test", "phy" : 11, "che" : 22, "mat" : 33 }
+{ "_id" : ObjectId("6315d3bb85f16a97169f94c2"), "rno" : 1004, "name" : "test1", "phy" : 21, "che" : 21, "mat" : 13 }
+{ "_id" : ObjectId("6315d4e285f16a97169f94c3"), "rno" : 1005, "name" : "jarvis", "phy" : 6, "che" : 7, "mat" : 1 }
+{ "_id" : ObjectId("6315d53085f16a97169f94c4"), "rno" : 1006, "name" : "test", "phy" : 11, "che" : 22, "mat" : 33 }
+{ "_id" : ObjectId("6315d53085f16a97169f94c5"), "rno" : 1007, "name" : "john", "phy" : 2, "che" : 22, "mat" : 33 }
+> 
+
+> db.data.find({"rno":1001})
+{ "_id" : ObjectId("6315d2c485f16a97169f94bf"), "rno" : 1001, "name" : "pankaj", "phy" : 56, "che" : 78, "mat" : 43 }
+> db.data.find({"rno":1004})
+{ "_id" : ObjectId("6315d3bb85f16a97169f94c2"), "rno" : 1004, "name" : "test1", "phy" : 21, "che" : 21, "mat" : 13 }
+> db.data.find({"name":1},{"rno":1004})
+> db.data.find({"rno":1004},{"name":1})
+{ "_id" : ObjectId("6315d3bb85f16a97169f94c2"), "name" : "test1" }
+> db.data.find({"rno":1004},{"_id":1,"name":1})
+{ "_id" : ObjectId("6315d3bb85f16a97169f94c2"), "name" : "test1" }
+> db.data.find({"rno":1004},{"_id":0,"name":1})
+{ "name" : "test1" }
+> 
+
+
+
+
+
+
+> db.data.find({"rno":1001,"name":"pankaj"})
+{ "_id" : ObjectId("6315d2c485f16a97169f94bf"), "rno" : 1001, "name" : "pankaj", "phy" : 56, "che" : 78, "mat" : 43 }
+> db.data.find({"rno":1001,"name":"pankaj1"})
+> db.data.find({"phy":{$gt:50}})
+{ "_id" : ObjectId("6315d2c485f16a97169f94bf"), "rno" : 1001, "name" : "pankaj", "phy" : 56, "che" : 78, "mat" : 43 }
+> db.data.find({"phy":{$lt:50}})
+{ "_id" : ObjectId("6315d2df85f16a97169f94c0"), "rno" : 1002, "name" : "ravi", "phy" : 16, "che" : 71, "mat" : 13 }
+{ "_id" : ObjectId("6315d3bb85f16a97169f94c1"), "rno" : 1003, "name" : "test", "phy" : 11, "che" : 22, "mat" : 33 }
+{ "_id" : ObjectId("6315d3bb85f16a97169f94c2"), "rno" : 1004, "name" : "test1", "phy" : 21, "che" : 21, "mat" : 13 }
+{ "_id" : ObjectId("6315d4e285f16a97169f94c3"), "rno" : 1005, "name" : "jarvis", "phy" : 6, "che" : 7, "mat" : 1 }
+{ "_id" : ObjectId("6315d53085f16a97169f94c4"), "rno" : 1006, "name" : "test", "phy" : 11, "che" : 22, "mat" : 33 }
+{ "_id" : ObjectId("6315d53085f16a97169f94c5"), "rno" : 1007, "name" : "john", "phy" : 2, "che" : 22, "mat" : 33 }
+> 
+> db.data.find({"phy":{$lt:50}})
+{ "_id" : ObjectId("6315d2df85f16a97169f94c0"), "rno" : 1002, "name" : "ravi", "phy" : 16, "che" : 71, "mat" : 13 }
+{ "_id" : ObjectId("6315d3bb85f16a97169f94c1"), "rno" : 1003, "name" : "test", "phy" : 11, "che" : 22, "mat" : 33 }
+{ "_id" : ObjectId("6315d3bb85f16a97169f94c2"), "rno" : 1004, "name" : "test1", "phy" : 21, "che" : 21, "mat" : 13 }
+{ "_id" : ObjectId("6315d4e285f16a97169f94c3"), "rno" : 1005, "name" : "jarvis", "phy" : 6, "che" : 7, "mat" : 1 }
+{ "_id" : ObjectId("6315d53085f16a97169f94c4"), "rno" : 1006, "name" : "test", "phy" : 11, "che" : 22, "mat" : 33 }
+{ "_id" : ObjectId("6315d53085f16a97169f94c5"), "rno" : 1007, "name" : "john", "phy" : 2, "che" : 22, "mat" : 33 }
+> db.data.find({"phy":{$lt:50}})
+
+
+
+
+
+
+> db.data.find({"phy":{$lte:20}})
+{ "_id" : ObjectId("6315d2df85f16a97169f94c0"), "rno" : 1002, "name" : "ravi", "phy" : 16, "che" : 71, "mat" : 13 }
+{ "_id" : ObjectId("6315d3bb85f16a97169f94c1"), "rno" : 1003, "name" : "test", "phy" : 11, "che" : 22, "mat" : 33 }
+{ "_id" : ObjectId("6315d4e285f16a97169f94c3"), "rno" : 1005, "name" : "jarvis", "phy" : 6, "che" : 7, "mat" : 1 }
+{ "_id" : ObjectId("6315d53085f16a97169f94c4"), "rno" : 1006, "name" : "test", "phy" : 11, "che" : 22, "mat" : 33 }
+{ "_id" : ObjectId("6315d53085f16a97169f94c5"), "rno" : 1007, "name" : "john", "phy" : 2, "che" : 22, "mat" : 33 }
+> db.data.find({"phy":{$eq:20}})
+> db.data.find({"phy":{$eq:2}})
+
+
+
+
+
+
+
+> db.data.find({"phy":{$eq:2}})
+{ "_id" : ObjectId("6315d53085f16a97169f94c5"), "rno" : 1007, "name" : "john", "phy" : 2, "che" : 22, "mat" : 33 }
+> db.data.find({"phy":{$ne:2}})
+{ "_id" : ObjectId("6315d2c485f16a97169f94bf"), "rno" : 1001, "name" : "pankaj", "phy" : 56, "che" : 78, "mat" : 43 }
+{ "_id" : ObjectId("6315d2df85f16a97169f94c0"), "rno" : 1002, "name" : "ravi", "phy" : 16, "che" : 71, "mat" : 13 }
+{ "_id" : ObjectId("6315d3bb85f16a97169f94c1"), "rno" : 1003, "name" : "test", "phy" : 11, "che" : 22, "mat" : 33 }
+{ "_id" : ObjectId("6315d3bb85f16a97169f94c2"), "rno" : 1004, "name" : "test1", "phy" : 21, "che" : 21, "mat" : 13 }
+{ "_id" : ObjectId("6315d4e285f16a97169f94c3"), "rno" : 1005, "name" : "jarvis", "phy" : 6, "che" : 7, "mat" : 1 }
+{ "_id" : ObjectId("6315d53085f16a97169f94c4"), "rno" : 1006, "name" : "test", "phy" : 11, "che" : 22, "mat" : 33 }
+> 
+
+
+
+> db.data.find({$or:[{"rno":1002},{"rno":1004}]})
+{ "_id" : ObjectId("6315d2df85f16a97169f94c0"), "rno" : 1002, "name" : "ravi", "phy" : 16, "che" : 71, "mat" : 13 }
+{ "_id" : ObjectId("6315d3bb85f16a97169f94c2"), "rno" : 1004, "name" : "test1", "phy" : 21, "che" : 21, "mat" : 13 }
+> db.data.find({$or:[{"rno":1002},{"rno":10041}]})
+{ "_id" : ObjectId("6315d2df85f16a97169f94c0"), "rno" : 1002, "name" : "ravi", "phy" : 16, "che" : 71, "mat" : 13 }
+> db.data.find({$or:[{"rno":1002},{"rno":1004}]})
+{ "_id" : ObjectId("6315d2df85f16a97169f94c0"), "rno" : 1002, "name" : "ravi", "phy" : 16, "che" : 71, "mat" : 13 }
+{ "_id" : ObjectId("6315d3bb85f16a97169f94c2"), "rno" : 1004, "name" : "test1", "phy" : 21, "che" : 21, "mat" : 13 }
+> db.data.find({$or:[{"rno":1002},{"rno":1004}]})
+
+
+
+
+
+
+> db.data.find({$and:[{"rno":1002},{"name":"ravi"}]})
+{ "_id" : ObjectId("6315d2df85f16a97169f94c0"), "rno" : 1002, "name" : "ravi", "phy" : 16, "che" : 71, "mat" : 13 }
+> db.data.find({$and:[{"rno":1002},{"name":"ravi1"}]})
+> db.data.find()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+> db.data.find()
+{ "_id" : ObjectId("6315d2c485f16a97169f94bf"), "rno" : 1001, "name" : "pankaj", "phy" : 56, "che" : 78, "mat" : 43 }
+{ "_id" : ObjectId("6315d2df85f16a97169f94c0"), "rno" : 1002, "name" : "ravi", "phy" : 16, "che" : 71, "mat" : 13 }
+{ "_id" : ObjectId("6315d3bb85f16a97169f94c1"), "rno" : 1003, "name" : "test", "phy" : 11, "che" : 22, "mat" : 33 }
+{ "_id" : ObjectId("6315d3bb85f16a97169f94c2"), "rno" : 1004, "name" : "test1", "phy" : 21, "che" : 21, "mat" : 13 }
+{ "_id" : ObjectId("6315d4e285f16a97169f94c3"), "rno" : 1005, "name" : "jarvis", "phy" : 6, "che" : 7, "mat" : 1 }
+{ "_id" : ObjectId("6315d53085f16a97169f94c4"), "rno" : 1006, "name" : "test", "phy" : 11, "che" : 22, "mat" : 33 }
+{ "_id" : ObjectId("6315d53085f16a97169f94c5"), "rno" : 1007, "name" : "john", "phy" : 2, "che" : 22, "mat" : 33 }
+> db.data.find({},{_id:0})
+{ "rno" : 1001, "name" : "pankaj", "phy" : 56, "che" : 78, "mat" : 43 }
+{ "rno" : 1002, "name" : "ravi", "phy" : 16, "che" : 71, "mat" : 13 }
+{ "rno" : 1003, "name" : "test", "phy" : 11, "che" : 22, "mat" : 33 }
+{ "rno" : 1004, "name" : "test1", "phy" : 21, "che" : 21, "mat" : 13 }
+{ "rno" : 1005, "name" : "jarvis", "phy" : 6, "che" : 7, "mat" : 1 }
+{ "rno" : 1006, "name" : "test", "phy" : 11, "che" : 22, "mat" : 33 }
+{ "rno" : 1007, "name" : "john", "phy" : 2, "che" : 22, "mat" : 33 }
+> 
+> db.data.find({},{_id:0})
+{ "rno" : 1001, "name" : "pankaj", "phy" : 56, "che" : 78, "mat" : 43 }
+{ "rno" : 1002, "name" : "ravi", "phy" : 16, "che" : 71, "mat" : 13 }
+{ "rno" : 1003, "name" : "test", "phy" : 11, "che" : 22, "mat" : 33 }
+{ "rno" : 1004, "name" : "test1", "phy" : 21, "che" : 21, "mat" : 13 }
+{ "rno" : 1005, "name" : "jarvis", "phy" : 6, "che" : 7, "mat" : 1 }
+{ "rno" : 1006, "name" : "test", "phy" : 11, "che" : 22, "mat" : 33 }
+{ "rno" : 1007, "name" : "john", "phy" : 2, "che" : 22, "mat" : 33 }
+> db.data.find({},{_id:0}).sort({"phy":1})
+
+
+
+
+
+
+
+
+
+
+> db.data.find({},{_id:0}).sort({"phy":1})
+{ "rno" : 1007, "name" : "john", "phy" : 2, "che" : 22, "mat" : 33 }
+{ "rno" : 1005, "name" : "jarvis", "phy" : 6, "che" : 7, "mat" : 1 }
+{ "rno" : 1003, "name" : "test", "phy" : 11, "che" : 22, "mat" : 33 }
+{ "rno" : 1006, "name" : "test", "phy" : 11, "che" : 22, "mat" : 33 }
+{ "rno" : 1002, "name" : "ravi", "phy" : 16, "che" : 71, "mat" : 13 }
+{ "rno" : 1004, "name" : "test1", "phy" : 21, "che" : 21, "mat" : 13 }
+{ "rno" : 1001, "name" : "pankaj", "phy" : 56, "che" : 78, "mat" : 43 }
+> db.data.find({},{_id:0}).sort({"name":1})
+{ "rno" : 1005, "name" : "jarvis", "phy" : 6, "che" : 7, "mat" : 1 }
+{ "rno" : 1007, "name" : "john", "phy" : 2, "che" : 22, "mat" : 33 }
+{ "rno" : 1001, "name" : "pankaj", "phy" : 56, "che" : 78, "mat" : 43 }
+{ "rno" : 1002, "name" : "ravi", "phy" : 16, "che" : 71, "mat" : 13 }
+{ "rno" : 1003, "name" : "test", "phy" : 11, "che" : 22, "mat" : 33 }
+{ "rno" : 1006, "name" : "test", "phy" : 11, "che" : 22, "mat" : 33 }
+{ "rno" : 1004, "name" : "test1", "phy" : 21, "che" : 21, "mat" : 13 }
+> 
+
+> db.data.find({},{_id:0}).sort({"phy":-1})
+{ "rno" : 1001, "name" : "pankaj", "phy" : 56, "che" : 78, "mat" : 43 }
+{ "rno" : 1004, "name" : "test1", "phy" : 21, "che" : 21, "mat" : 13 }
+{ "rno" : 1002, "name" : "ravi", "phy" : 16, "che" : 71, "mat" : 13 }
+{ "rno" : 1003, "name" : "test", "phy" : 11, "che" : 22, "mat" : 33 }
+{ "rno" : 1006, "name" : "test", "phy" : 11, "che" : 22, "mat" : 33 }
+{ "rno" : 1005, "name" : "jarvis", "phy" : 6, "che" : 7, "mat" : 1 }
+{ "rno" : 1007, "name" : "john", "phy" : 2, "che" : 22, "mat" : 33 }
+> db.data.find({},{_id:0}).sort({"phy":-1}).limit(1)
+{ "rno" : 1001, "name" : "pankaj", "phy" : 56, "che" : 78, "mat" : 43 }
+> AA
+
+

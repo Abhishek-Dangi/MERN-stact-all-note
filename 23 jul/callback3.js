@@ -17,5 +17,3 @@ add(a, b, (result) => {
 });
 
 console.log("After function execution");
-
-

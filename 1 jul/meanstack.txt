@@ -31,10 +31,3 @@ programming , popups....
 or
 
 It is event based script , i.e JS will work when event will be applied on web page  
-
-
-
-
-
- 
-
