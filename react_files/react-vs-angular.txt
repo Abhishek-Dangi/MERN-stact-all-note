@@ -1,0 +1,62 @@
+ReactJS or React.js : It is Javascript based library  used to develop user interface for web based application.
+	It is used to generated UI by following all real world trending requirements
+	
+-> History
+Node version : 16.13.0
+NPM : 8.1.0
+React LTS : 17.0.2  (2013)
+
+--------------------------------------------------
+
+React vs Angular
+
+-> React
+
+* It is UI development library 
+
+* It follows MVC(model-view-controller) approach to write UI for application
+
+* It is implemented on the basis of ECMA script 6 (ES6 -> 2015)
+
+* External JS can be embedded
+
+* Used to develop SPA & hybrid mobile app (React Native)
+
+* Multiple tools are used for testing purpose 
+
+* Works on Virtual DOM
+
+* Eg : Meta or Facebook , Netflix , yahoo.mail , Airbus........
+
+--------------------------------------------------
+--------------------------------------------------
+
+-> Angular
+
+* It is UI development framework , entire UI will be develop using architecture  
+
+* It is based on component driven architecture
+
+* It is implemented on the basis of Microsoft Typescript
+
+* External JS can not be embedded
+
+* Used to develop Web UI on basis of component based architecture & hybrid mobile app (Angular Native OR Ionic) 
+
+* Single tools is used for testing purpose (karmajs)
+
+* Works on real DOM
+
+* Google , Paypal , GoogleGloud.....
+
+-------------------------------------------------- 
+
+
+
+
+
+
+
+
+
+

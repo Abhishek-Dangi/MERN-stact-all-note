@@ -7,7 +7,6 @@ Synchronous or Blocking functions & Asynchronous or Non-Blocking functions :-
 -> Asynchronous or Non-Blocking functions : Those function block which when executed , will not restrict further code from execution are Asynchronous or Non-Blocking functions.    
 
 Note :- By default all functions are Sync in nature , but maximum callback which are used they will be async in nature.
-    
 
 ----------
 ---------- P1

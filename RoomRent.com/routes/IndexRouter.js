@@ -1,7 +1,20 @@
 import express from 'express';
 import IndexController from '../controller/IndexController.js';
+//import * as cryptoAPI from './crypto.js';
 
 const router = express.Router();
+
+/* Middleware to handle cookie data */
+var cunm="";
+var cpass=""; 
+router.use("/login",(req,res,next)=>{
+ if(req.cookies.cunm!=undefined)
+ {
+  cunm=req.cookies.cunm;
+  cpass=req.cookies.cpass;
+ }
+ next();
+})
 
 router.get("/",(req,res)=>{ 
  res.render("index"); 
@@ -33,15 +46,36 @@ router.post("/register",(req,res)=>{
 });
 
 router.get("/login",(req,res)=>{ 
- res.render("login",{"output":""});  
+ if(req.session.sunm!=undefined)
+ {
+  req.session.sunm=undefined;
+  req.session.srole=undefined;       
+ }   
+ res.render("login",{"output":"","cunm":cunm,"cpass":cpass});  
 });
 
 router.post("/login",(req,res)=>{
  IndexController.userLogin(req.body).then((result)=>{
-  const output=result.rescode==0?"Loggedin failed":"Loggedin success";
-    res.render("login",{"output":output});  
+    if(result.rescode==1 || result.rescode==2)
+    {
+     req.session.sunm=result.userDetails.email;
+     req.session.srole=result.userDetails.role;
+
+     if(req.body.chk!=undefined)
+     {
+      res.cookie("cunm",result.userDetails.email,{maxAge : 3600000});
+      res.cookie("cpass",result.userDetails.password,{maxAge : 3600000});    
+     }
+
+    }
+
+    result.rescode==0
+    ?res.render("login",{"output":"Invalid user or verify account...."})
+    :(result.rescode==1
+        ?res.redirect("/admin")
+        :res.redirect("/user"));
  }).catch((err)=>{
-  res.render("login",{"output":err});
+    res.render("login",{"output":err,"cunm":cunm,"cpass":cpass});
  });
 });
 

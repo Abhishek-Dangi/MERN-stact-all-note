@@ -2,6 +2,12 @@ import express from 'express';
 import * as path from 'path';
 import * as url from 'url';
 import bodyParser from 'body-parser';
+import session from 'express-session';
+import randomstring from 'randomstring';
+import cookie from 'cookie-parser';
+import fileupload from 'express-fileupload';
+
+const key=randomstring.generate();
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
 var app=express();
@@ -20,6 +26,15 @@ app.use(bodyParser());
 //configuration for template engine
 app.set("view engine","ejs"); 
 app.set("views","./views"); 
+
+//configuration to enable session 
+app.use(session({"secret":key}));
+
+//configuration for cookie 
+app.use(cookie());
+
+//configuration for fileuploading 
+app.use(fileupload());
 
 //route level middleware to load specific route as per user
 app.use("/admin",AdminRouter);

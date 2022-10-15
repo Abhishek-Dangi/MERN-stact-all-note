@@ -1,0 +1,32 @@
+React environment setup :-
+
+-> Install create-react-app as global dependency
+
+command : npm install create-react-app -g
+
+-> Check version
+
+command to get module version : create-react-app -V  (@5.0.1)
+command to get react version : npm view react version (@18.2.0)
+
+----------------------------------------------------------------
+
+Create & run React app using create-react-app :-
+
+-> Create React app : move to specific location where react application is to be generated
+
+command : create-react-app <project_name>
+
+-> Move to project folder
+
+command : cd <project_name>
+
+-> Run project
+
+command : npm start 
+
+
+ 
+ 
+
+

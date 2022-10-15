@@ -27,8 +27,8 @@ class IndexController
   return new Promise((resolve,reject)=>{
     userDetails={...userDetails,status:1}
     IndexModel.fetchUsers(userDetails).then((result)=>{
-      const res=result.length==0? 0 : 1;
-      resolve({rescode:res});  
+      const res=result.length==0? 0 :(result[0].role=="admin")?1:2;
+      resolve({rescode:res,"userDetails":result[0]});  
     }).catch((err)=>{
      reject(err);  
     });  

@@ -1,12 +1,17 @@
 <script>
     function demo() {
         var b = 200;
-        document.write("inside function b =" + b + "<br>");
-        document.write("inside function a =" + a + "<br>");
+        document.write("inside function b =" + b + "<br>"); // print
+        document.write("inside function a =" + a + "<br>"); //print
     }
 
     var a = 100;
-    document.write("outside function a =" + a + "<br>");
+    document.write("outside function a =" + a + "<br>");// print
     demo();
     document.write("outside function b =" + b + "<br>");//outside b is not print
 </script>
+
+<!-- 
+outside function a =100
+inside function b =200
+inside function a =100 -->
