@@ -1,7 +1,7 @@
 Software:software is set of programs
 , program is set of instruction
 
-or
+or 
 
 a software is an interface(bridge) used to connect
 user with a service provider
@@ -105,45 +105,3 @@ Application:
 -> desktop : 20%
 -> web : 40%
 -> mobile : 30%
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	 
- 
-
-
- 
- 
-

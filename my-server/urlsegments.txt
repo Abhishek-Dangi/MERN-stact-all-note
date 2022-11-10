@@ -1,10 +1,10 @@
 URL segments :-
 
 http://localhost:8081    /service
-           s1                             s2
+           s1               s2
    
-             s1                                     s2           
-http://localhost:8081             /service
+           s1               s2           
+http://localhost:8081     /service
 ?username=admin&password=admin123
                               s3              
                               
